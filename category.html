@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% if post.ext_seo_keywords.length %}<meta name="keywords" content="{{post.ext_seo_keywords}}" />{% /if %}
+    {% if post.ext_seo_des.length %}<meta name="description" content="{{post.ext_seo_des}}" />{% /if %}
+
+    <title>
+      {% if pageTitle.length %}
+      {{ pageTitle }}
+      {% else %}
+      {{ siteName }}
+      {% /if %}
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="asset/css/lib.css"/>
+    <link rel="stylesheet" type="text/css" href="asset/css/index.css"/>
+</head>
+<body>
+<div id="app">
+    <header>
+        <h1>徐东阳的博客</h1>
+        <p class="sub-title">平心静气</p>
+        <div class="nav clearfix">
+						{% for m in siteMenu %}
+							<a target="{{ m.target }}" href="{{ m.url }}">{{ m.name }}</a>
+						{% /for %}
+        </div>
+    </header>
+    <!--<h2 class="page-title">-->
+        <!--关于技术-->
+    <!--</h2>-->
+    <!--<div class="notice">-->
+        <!--公告-->
+    <!--</div>-->
+    <div class="tech-list">
+				<!--只支持两级嵌套-->
+        {% for c in categoriesTree %}
+        <div class="tech">
+            <!--无嵌套的情况-->
+            {% if c.children.@count %}
+            {% else %}
+              <h2>{{ c.name }}</h2>
+            {% /if %}
+            {% for p in c.posts %}
+            <div class="tech-item">
+                <a href="{{ p.url }}">{{ p.title }}</a>
+            </div>
+            {% /for %}
+
+            <!--两级嵌套的情况-->
+						{% for cc in c.children %}
+							<h2>{{ c.name }}--{{cc.name}}</h2>
+							{% for p in cc.posts %}
+									<div class="tech-item">
+											<a href="{{ p.url }}">{{ p.title }}</a>
+									</div>
+							{% /for %}
+						{% /for %}
+        </div>
+        {% /for %}
+    </div>

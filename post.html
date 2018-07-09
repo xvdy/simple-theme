@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="与日俱增">
+
+    {% if post.ext_seo_keywords.length %}<meta name="keywords" content="{{post.ext_seo_keywords}}" />{% /if %}
+    {% if post.ext_seo_des.length %}<meta name="description" content="{{post.ext_seo_des}}" />{% /if %}
+
+    <title>
+      {% if pageTitle.length %}
+      {{ pageTitle }}
+      {% else %}
+      {{ siteName }}
+      {% /if %}
+    </title>
+
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <style type="text/css">
+			 html {
+					 background:#f5f5f5;
+					 padding:0 10px;
+					 height:100%;
+			}
+			 body {
+					 background:#fff;
+					 font-size:14px;
+					 color:#333;
+					 padding:30px 36px 60px;
+					 max-width:980px;
+					 min-width:320px;
+					 margin:0 auto;
+					 box-sizing:border-box;
+					 border-left:1px solid> box-shadow:rgba(100,100,100,0.3) 0 2px 10px -2px;
+					 font-family:'Segoe UI', Helvetica, Arial, 'microsoft yahei', sans-serif;
+			}
+			 footer {
+					 color: #aaa;
+					 text-align: center;
+					 margin: 50px 0 0 0;
+					 font-size: 13px;
+					 font-family: Arial;
+					 clear: both;
+			}
+    </style>
+</head>
+<h1>{{ post.title }}</h1>
+<div> {{ post.content }} </div>

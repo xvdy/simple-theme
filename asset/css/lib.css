@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* 主题色 */
+* {
+    margin: 0;
+    padding: 0; }
+
+html {
+    height: 100%; }
+
+body {
+    font-size: 14px;
+    color: #333;
+    background: white;
+    font-family: 'Microsoft YaHei', 'open sans', helvetica, sans-serif;
+    background: #f1f1f1;
+    padding: 0 10px; }
+
+#app {
+    max-width: 980px;
+    min-width: 320px;
+    min-height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 45px 36px 50px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    box-shadow: rgba(100, 100, 100, 0.35) 0 2px 12px -2px;
+    background: white; }
+
+@media only screen and (max-width: 440px) {
+    html {
+        padding: 0; }
+    .container {
+        padding: 50px 10px 60px; } }
+
+h1, h2, h3 {
+    font-family: 'Microsoft YaHei', 'open sans', helvetica, sans-serif; }
+
+h2.page-title {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 1.2em 0 1.2em;
+    clear: both; }
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed; }
+
+input, select, textarea, a, button {
+    outline: none; }
+
+img {
+    border: none; }
+
+a {
+    color: #1a8deb;
+    text-decoration: none; }
+
+a:hover {
+    color: #5fb300;
+    text-decoration: underline; }
+
+a:visited {
+    color: #5fb300; }
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* 页眉 */
+h1 {
+    font-weight: normal;
+    margin: 0 0 16px;
+    text-align: center; }
+
+h1 > a {
+    font-size: 28px;
+    color: #333; }
+
+h1 > a:hover {
+    text-decoration: none; }
+
+h1 > a:visited {
+    color: #333; }
+
+p.sub-title {
+    margin: 0 0 25px;
+    color: #999;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Microsoft YaHei';
+    text-indent: 0;
+    line-height: 100%; }
+
+/* 导航 */
+.nav {
+    text-align: left;
+    margin: 40px 0 20px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    height: 38px;
+    line-height: 38px;
+    font-family: 'Microsoft YaHei';
+    background: #f5f5f5; }
+
+.nav a {
+    display: inline-block;
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    float: left;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 15px;
+    position: relative;
+    top: -1px;
+    background: #f5f5f5; }
+
+.nav a:hover {
+    background: #dae7f2; }
+
+.nav a.selected {
+    font-weight: bold;
+    background: #2196F3;
+    color: #fff;
+    border-top: 1px solid #2196F3;
+    border-bottom: 1px solid #2196F3; }
+
+.empty-data {
+    margin: 3em 0;
+    text-align: center;
+    color: #666; }
+
+/* 页脚 */
+footer {
+    color: #aaa;
+    text-align: center;
+    margin: 50px 0 0 0;
+    font-size: 13px;
+    font-family: Arial;
+    clear: both; }
+
+.notice {
+    border: 1px solid #ffecb2;
+    padding: 16px;
+    background: #fffaeb;
+    margin: 1.5em 0;
+    padding: 10px 20px;
+    line-height: 170%;
+    font-size: 13px;
+    color: #666; }
